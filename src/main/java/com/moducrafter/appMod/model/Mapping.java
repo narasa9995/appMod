@@ -7,10 +7,10 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "AMS_MAPPING")
+@Table(name = "MAPPING")
 @Setter
 @Getter
-public class AmsMapping {
+public class Mapping {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +23,8 @@ public class AmsMapping {
     private Employee supervisorId;
     @Column(name = "UPDATED_BY")
     private String updatedBy;
+    @Column(name = "BILLABLE")
+    private Boolean Billable;
     @Column(name = "UPDATED_TS")
     private LocalDateTime updatedTs;
 }
